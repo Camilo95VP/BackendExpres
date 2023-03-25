@@ -4,7 +4,8 @@
   "description": "MEAN API",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "start": "node index.js"
   },
   "author": "Tomas Ruiz Diaz",
   "license": "ISC",
