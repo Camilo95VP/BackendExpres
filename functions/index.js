@@ -1,7 +1,6 @@
 const express = require('express');
-const conectarDB = require('./config/db');
+const conectarDB = require('../config/db');
 const cors = require("cors");
-
 
 // Creamos el servidor
 const app = express();
@@ -15,9 +14,8 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/clientes', require('./routes/clientes'));
-app.use('/api/servicios', require('./routes/servicios'));
 
 app.listen(port, () => {
     console.log('El servidor esta corriendo perfectamente')
 })
-
+module.exports = functions.https.onRequest(app);
