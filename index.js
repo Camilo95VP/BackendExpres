@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use('/api/clientes', require('./routes/clientes'));
 app.use('/api/servicios', require('./routes/servicios'));
+app.use('/api/torres', require('./routes/torresRoutes'));
 
 app.listen(port, () => {
     console.log('El servidor esta corriendo perfectamente')
