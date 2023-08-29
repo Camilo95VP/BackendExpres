@@ -39,6 +39,10 @@ const torreSchema = new mongoose.Schema({
     default: "sin enviar", // Valor predeterminado "sin enviar"
     enum: ["sin enviar", "enviado"], // Opciones permitidas
   },
+  tecnico: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Torre", torreSchema);

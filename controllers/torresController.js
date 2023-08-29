@@ -24,7 +24,6 @@ exports.obtenerTorrePorId = async (req, res) => {
 };
 
 // Controlador para crear una nueva torre
-// Controlador para crear una nueva torre
 exports.crearTorre = async (req, res) => {
   const {
     residencia,
@@ -35,6 +34,7 @@ exports.crearTorre = async (req, res) => {
     celular,
     nivelInfestacion,
     recomendaciones,
+    tecnico
   } = req.body;
 
   try {
@@ -49,6 +49,7 @@ exports.crearTorre = async (req, res) => {
       nivelInfestacion,
       recomendaciones,
       estadoMensaje: "sin enviar",
+      tecnico
     });
 
     const torreGuardada = await nuevaTorre.save();
@@ -71,6 +72,7 @@ exports.actualizarTorre = async (req, res) => {
     nivelInfestacion,
     recomendaciones,
     estadoMensaje,
+    tecnico
   } = req.body;
 
   try {
@@ -86,6 +88,7 @@ exports.actualizarTorre = async (req, res) => {
         nivelInfestacion,
         recomendaciones,
         estadoMensaje,
+        tecnico
       },
       { new: true }
     );
